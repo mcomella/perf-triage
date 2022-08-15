@@ -10,7 +10,7 @@ import random
 import sys
 
 
-DATE = datetime.now(timezone.utc)
+DATE = datetime.now(timezone.utc) + timedelta(weeks=1)
 SAVED_ROTATIONS_PATH = Path("rotations.pickle")
 
 
@@ -163,7 +163,8 @@ def generate_rotation(leaders, rotations):
 
 def get_addresses_from_rotation(rotation):
     attendees = [rotation.leader] + [s for s in rotation.sheriffs]
-    return [a.get_cal_nick() + "@mozilla.com" for a in attendees]
+    return ['mcomella@mozilla.com']
+    #return [a.get_cal_nick() + "@mozilla.com" for a in attendees]
 
 
 def add_gcal_reminder(is_production, rotation, generated_next_week):
