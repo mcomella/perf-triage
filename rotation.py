@@ -163,6 +163,7 @@ def generate_rotation(leaders, rotations):
 
 def get_addresses_from_rotation(rotation):
     attendees = [rotation.leader] + [s for s in rotation.sheriffs]
+    # run again
     return ['mcomella@mozilla.com']
     #return [a.get_cal_nick() + "@mozilla.com" for a in attendees]
 
